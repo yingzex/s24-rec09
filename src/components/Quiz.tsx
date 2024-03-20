@@ -3,6 +3,7 @@ import './Quiz.css'
 import QuizCore from '../core/QuizCore';
 
 const Quiz: React.FC = () => {
+  // useRef is a hook that allows you to persistently hold a reference to a value across renders without causing re-renders when its content changes. In this case, quizCore is a ref that stores an instance of QuizCore, presumably a class that manages the logic of the quiz (like keeping track of questions, scores, etc.). The value of quizCore.current will be the same instance of QuizCore across all renders, which allows for consistent access to quiz-related methods without re-instantiating the class on every render.
   const quizCore = useRef(new QuizCore());
 
   const [currentQuestion, setCurrentQuestion] = useState(quizCore.current.getCurrentQuestion());
