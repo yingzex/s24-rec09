@@ -40,7 +40,7 @@ class QuizCore {
   /**
    * Move to the next question.
    */
-  public nextQuestion(): void {      
+  public nextQuestion(): void {
     this.currentQuestionIndex++;
   }
 
